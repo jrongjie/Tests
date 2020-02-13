@@ -1,0 +1,33 @@
+.card { /*tells the website what div we are styling*/
+    width: 300px; /*tells how much space the div/container can take up*/
+    text-align: center; /*centers text to div*/
+    margin: auto; /*centers to page*/
+    display: block; /*tells the space to be on it's own line*/
+    position: absolute; /*tells it not to move*/
+    overflow: hidden; /*tells it not to show content that doesn't fit in div*/
+    animation: flippin 1.5s linear infinite; /*tells the code to use the animation named flippin, animation should take 1.5 seconds, animation should restart from the beginning once it ends, and repeat animation forever */
+    opacity: 0; /*hides the text if not connected to animation*/
+}
+
+  @keyframes flippin { /*this is what gives the animation the fade in and out look*/
+    0% { /*starting at 0*/
+      opacity: 0; /*hides the text*/
+      transform: translateY(-10px); /*starting position is -10px from where the text normally rests*/
+    }
+    20% { /*change this to change the time it takes to fade in*/
+      opacity: 1; /*shows the text*/
+      transform: translateY(0px); /*current position is where the text normally rests*/
+    }
+    50% { /*half way through the animation*/
+      opacity: 1; /*shows the text*/
+      transform: translateY(0px); /*current position is where the text normally rests*/
+    }
+    80% { /*change this to change the time it takes to fade out*/
+      opacity: 0; /*shows the text*/
+      transform: translateY(10px); /*current position is 10px lower from where the text normally rests*/
+    }
+    100% { /*the end of the animation*/
+      opacity: 0; /*shows the text*/
+      transform: translateY(10px); /*ending position is -10px from where the text normally rests*/
+    }
+  }
