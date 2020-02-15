@@ -9,29 +9,29 @@ nextWord.forEach(function(element){
   //container.replaceChild(nextWord, container);
 })
 */
+const container = document.getElementById("word");
+const body = document.body;
+const six = body.innerHTML;
+const nextWord = ["Joy", "Community", "Peace", "Strength", "Fullness", "Victory", "Healing", "Purpose", "Rest", "Wisdom", "Freedom"];
 
-var body = document.body;
-var six = body.innerHTML;
-var splittedText = ["Hello", "World", "How", "Are", "You", "Today"];
-
-loopThroughArray(splittedText, function (arrayElement, loopTime) {
+loopThroughArray(nextWord, function (arrayElement, loopTime) {
     six += arrayElement+ ": " + loopTime+ "<br/>";
 }, 1000);
 
 function loopThroughArray(array, callback, interval) {
-    var newLoopTimer = new LoopTimer(function (time) {
+    let newLoopTimer = new LoopTimer(function (time) {
         var element = array.shift();
         callback(element, time - start);
         array.push(element);
     }, interval);
 
-    var start = newLoopTimer.start();
+    let start = newLoopTimer.start();
 };
 
 // Timer
 function LoopTimer(render, interval) {
-    var timeout;
-    var lastTime;
+    let timeout;
+    let lastTime;
 
     this.start = startLoop;
     this.stop = stopLoop;
@@ -51,9 +51,9 @@ function LoopTimer(render, interval) {
 
     // The actual loop
     function createLoop() {
-        var thisTime = Date.now();
-        var loopTime = thisTime - lastTime;
-        var delay = Math.max(interval - loopTime, 0);
+        let thisTime = Date.now();
+        let loopTime = thisTime - lastTime;
+        let delay = Math.max(interval - loopTime, 0);
         timeout = setTimeout(createLoop, delay);
         lastTime = thisTime + delay;
         render(thisTime);

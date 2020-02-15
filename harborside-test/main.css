@@ -1,3 +1,7 @@
+/*add in media queries for responsive font size*/
+
+/*write in styling for fonts*/
+
 .card { /*tells the website what div we are styling*/
     width: 300px; /*tells how much space the div/container can take up*/
     text-align: center; /*centers text to div*/
