@@ -1,15 +1,29 @@
 /*add in media queries for responsive font size*/
+@media only screen and (max-width: 480px) {
+p {font-size: 20px;}
+}
+@media only screen and (min-width: 481px) {
+  p {font-size: 35px;}
+}
+@media only screen and (min-width: 769px) {
+  p {font-size: 45px;}
+}
+@media only screen and (min-width: 1280px) {
+  p {font-size: 67px;}
+}
 
 /*write in styling for fonts*/
-
+p {
+  font-family: Montserrat;
+  font-weight: bold;
+}
 .card { /*tells the website what div we are styling*/
-    width: 300px; /*tells how much space the div/container can take up*/
     text-align: center; /*centers text to div*/
     margin: auto; /*centers to page*/
     display: block; /*tells the space to be on it's own line*/
     position: absolute; /*tells it not to move*/
     overflow: hidden; /*tells it not to show content that doesn't fit in div*/
-    animation: flippin 1.5s linear infinite; /*tells the code to use the animation named flippin, animation should take 1.5 seconds, animation should restart from the beginning once it ends, and repeat animation forever */
+    animation: flippin 1500ms linear infinite; /*tells the code to use the animation named flippin, animation should take 1 second, animation should restart from the beginning once it ends, and repeat animation forever */
     opacity: 0; /*hides the text if not connected to animation*/
 }
 

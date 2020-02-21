@@ -1,18 +1,20 @@
-//defines the space we want the word change to happen
-/*var container = document.getElementById("container");
+const card = document.getElementById("card"); //defines the space we want the word change to happen
+let word = document.getElementById("word");
+let nextWord = ["Joy", "Community", "Peace", "Strength", "Fullness", "Victory", "Healing", "Purpose", "Rest", "Wisdom", "Freedom"]; //This is the list of word that will be cycled through, if you change it make sure that it's in quotes and has a comma between each word
 
-//This is the list of word that will be cycled through, if you change it make sure that it's in quotes and has a comma between each word
-var nextWord = ["Love", "Peace", "Joy", "Patience", "Kindness", "Goodness", "Faith", "Confidence"];
+const speed = 2000; //time is in miliseconds
+let index = nextWord.indexOf();
 
-nextWord.forEach(function(element){
-  console.log(element);
-  //container.replaceChild(nextWord, container);
-})
-*/
-const container = document.getElementById("word");
-const body = document.body;
+setInterval(function(){
+    nextWord.forEach(function(nextWord){
+        console.log();
+        //card.replaceChild(nextWord, word);
+      });
+}, speed);
+
+/*const body = document.body;
 const six = body.innerHTML;
-const nextWord = ["Joy", "Community", "Peace", "Strength", "Fullness", "Victory", "Healing", "Purpose", "Rest", "Wisdom", "Freedom"];
+
 
 loopThroughArray(nextWord, function (arrayElement, loopTime) {
     six += arrayElement+ ": " + loopTime+ "<br/>";
@@ -27,7 +29,6 @@ function loopThroughArray(array, callback, interval) {
 
     let start = newLoopTimer.start();
 };
-
 // Timer
 function LoopTimer(render, interval) {
     let timeout;
@@ -42,13 +43,11 @@ function LoopTimer(render, interval) {
         lastTime = Date.now();
         return lastTime;
     }
-
     // Stop Loop
     function stopLoop() {
         clearTimeout(timeout);
         return lastTime;
     }
-
     // The actual loop
     function createLoop() {
         let thisTime = Date.now();
@@ -59,3 +58,4 @@ function LoopTimer(render, interval) {
         render(thisTime);
     }
 }
+*/
