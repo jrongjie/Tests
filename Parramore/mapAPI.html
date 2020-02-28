@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Parramore-Callahan Project Map API</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <h1>Say Map, say Map!</h1>
+        <div id="map"></div>
+        <script>
+            //video reference: https://youtu.be/Zxf1mnP5zcw
+            function initMap(){
+                //map options
+                var options = {
+                    zoom: 14,
+                    center: {lat:28.5383, lng:-81.3889}
+                }
+
+                //new map
+                var map = new google.maps.Map(document.getElementById("map"), options);
+
+                //Array of Markers
+                var markers = [
+                    { //WellsBuilt Museum
+                        coords: {lat:28.5385, lng:-81.3854},
+                        content:"<h1>The WellsBuilt Museum</h1>"
+                    },
+                    { //Callahan Neighborhood Center
+                        coords: {lat:28.5443, lng:-81.3884},
+                        content:"<h1>Callahan Neighborhood Center</h1>"
+                    },
+                    { //Maxey-Crooms
+                        coords: {lat:28.5363, lng:-81.3882},
+                        content:"<h1>The Maxey-Crooms House</h1>"
+                    },
+                    { //Ebeneezer Church
+                        coords: {lat:28.5399, lng:-81.3868},
+                        content:"<h1>Ebeneezer United Methodist Church</h1>"
+                    },
+                    { //Tinker Field
+                        coords: {lat:28.5392, lng:-81.4048},
+                        content:"<h1>Tinker Field</h1>"
+                    }
+                ];
+
+                //Loop through markers
+                for(var i = 0; i < markers.length; i++){
+                    //adds the marker
+                    addMarker(markers[i]);
+                }
+
+                //Add Marker function
+                function addMarker(props){
+                    var marker = new google.maps.Marker({
+                        position: props.coords,
+                        map:map,
+                        //icon: "url here",
+                    });
+                    //Check content
+                    if(props.content){
+                        var infoWindow = new google.maps.infoWindow({
+                            content: props.content,
+                        });
+                
+                        marker.addListener("mouseover", function(){
+                            infoWindow.open(map, marker)
+                        });
+                    }
+                }
+            }
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1pVHd95LLwDJEztaqH-0V_rU5qyqjCHg&callback=initMap"
+        type="text/javascript">
+        </script>
+    </body>
+</html>

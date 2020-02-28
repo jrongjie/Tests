@@ -1,0 +1,20 @@
+//THIS SECTION IS REFERENCE FOR 1 LOCATION
+//add marker
+var marker = new google.maps.Marker({
+    //WellsBuilt Museum
+    position:{lat:28.5385, lng:-81.3854},
+    map:map,
+
+    //can also make custom icons that are specific to each location or that are different from the regular red marker
+    //icon: "url here",
+});
+
+//this creates a popup about the marker
+var infoWindow = new google.maps.infoWindow({
+    content: "<h1>The WellsBuilt Museum</h1>";
+});
+
+//event listener for popup -- mouseover for hover, change to click if we want them to click on the location marker
+marker.addListener("mouseover", function(){
+    infoWindow.open(map, marker)
+}); 
