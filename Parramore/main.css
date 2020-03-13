@@ -1,4 +1,87 @@
 #map {
     width: 800px;
     height: 400px;
+    border: 2px solid #eca72c;
+    border-radius: .5em;
 }
+
+/* The window (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+    .modal-header {
+        padding: 2px 16px;
+        color: #9B2612;
+    }
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto; /* 15% from the top and centered */
+        padding: 20px;
+        border: 2px solid #ECA72C;
+        border-radius: 5px;
+        width: 90%; /* Could be more or less, depending on screen size */
+    }
+        /* The Close Button */
+        .close {
+            color: #0A2239;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: #9B2612;
+            text-decoration: none;
+            cursor: pointer;
+        }
+/*lists*/
+.no-bullets {
+    list-style: none;
+}
+
+iframe {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+button, .fake-button {
+    background-color: #FFC53A;
+    border: none;
+    color: #0A2239;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: Gotham;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    }
+    button:hover,
+    button:focus,
+    .fake-button:hover,
+    .fake-button:focus {
+        background-color: #ECA72C;
+        color: #9B2612;
+    }
+
+/*
+colors:
+#0A2239 dark blue
+#9B2612 dark red
+#FF2600 red
+#FFC53A bright yellow
+#ECA72C mustard
+*/

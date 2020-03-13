@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>home</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="tour.html">Tour</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+        </nav>
+        <!--banner-->
+        <div>
+            <h1>The Parramore-Callahan Neighborhood Project</h1>
+            <p>Explore the history of Orlando’s Parramore-Callahan area in a new light with our interactive heritage tour, where you can learn the local history.</p>
+            <button class="blue" onclick="window.location.href = `tour.html`;">Start Exploring</button>
+        </div>
+        <!--goal-->
+        <div>
+            <h2>Parramore Interactive Heritage Trail</h2>
+            <p>Our goal is to spread awareness of the cultural value of Orlando’s Parramore district by creating an immersive experience that presents the area as a cultural, educational, and tourist destination. To accomplish this, we are creating a mobile heritage tour of Parramore using a combination of historical markers, augmented reality, and digital storytelling. For those who are unable to physically attend the tour, Parramore-Callahan Neighborhood Project presents tour information through an easy-to-navigate map and lesson plans with extended oral histories and documentary film clips are also available. Currently, one is available to view and use, and more will be added as project development continues based on available funds and resources in a way that further extends the reach of the project from the physical spaces of Parramore to any classroom that can connect to this community’s history via a Parramore-Callahan Neighborhood Project. Connect today with Parramore and upcoming cultural events, farmer’s markets, and more through Parramore-Callahan Neighborhood Project.</p>
+        </div>
+
+        <!--takeaway-->
+        <div>
+            <h2>Main Takeaway</h2>
+            <p>The Parramore District was added to the National Register of Historic Places in 2009 and contains approximately 20 acres of historic buildings constructed between the 1800s and early 1940s that reflect the history of Orlando’s Black community. Development pressure is endangering nearby historic churches and other structures, and local residents have united to save historic structures such as the Wells’Built Hotel.</p>
+        </div>
+        
+        <!--video-->
+        <div>
+            <h2>Hear Their Stories</h2>
+            <p>Orlando, like the rest of the South, struggled to confront and end “Jim Crow” segregation and racial discrimination during the late 19th to early 20th century. Mayor Bob Carr along with city and community representatives realized that Orlando’s future rested with an emerging Sunbelt economy, that would help, ease racial tensions, improve the economy by lowering taxation and promoting technological advancements. However racial hostility in places like Montgomery, Alabama and Tallahassee, Florida threatened to halt progress. Learn more about how this effected the local people of Orlando.</p>
+            
+            <!-- Trigger/Open The Modal -->
+            <button id="myBtn">Watch Here</button>
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <iframe title="vimeo-player" 
+                            src="https://player.vimeo.com/video/393977381" 
+                            width="640" height="360" 
+                            frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("myBtn");
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks the button, open the modal 
+            btn.onclick = function() {
+            modal.style.display = "block";
+            }
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+            modal.style.display = "none";
+            }
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+            }
+            </script>
+        </div>
+
+        <!--events-->
+        <div>
+            <h2>Events</h2>
+            <ul class="no-bullets">
+                <li>
+                    <img src="..." alt="Profile photo of Harry Connick, Jr">
+                    <p>Harry Connick, Jr.</p>
+                </li>
+                <li>
+                    <img src="..." alt="Logo for the Orlando Art Show with a list of featured artists">
+                    <p>The Orlando Art Collective Member Art Show</p>
+                </li>
+                <li>
+                    <img src="" alt="Orlando Farmers Market logo">
+                    <p>Orlando Farmers Market</p>
+                </li>
+            </ul>
+            <button class="blue" onclick="window.location.href = `events.html`;">See More</button>
+        </div>
+        <!--Footer-->
+    </body>
+</html>

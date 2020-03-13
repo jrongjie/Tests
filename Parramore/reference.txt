@@ -18,3 +18,12 @@ var infoWindow = new google.maps.infoWindow({
 marker.addListener("mouseover", function(){
     infoWindow.open(map, marker)
 }); 
+
+//Shiloh Baptist
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/394014244" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+
+//Tinker Field
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/394056897" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+
+//Jones High School
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/394046087" width="640" height="360" frameborder="0" allowfullscreen></iframe>
